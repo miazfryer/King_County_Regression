@@ -65,4 +65,3 @@ Review the "Project Submission & Review" page in the "Milestones Instructions" t
 
 This project will give you a valuable opportunity to develop your data science skills using real-world data. The end-of-phase projects are a critical part of the program because they give you a chance to bring together all the skills you've learned, apply them to realistic projects for a business stakeholder, practice communication skills, and get feedback to help you improve. You've got this!
 
-hi
