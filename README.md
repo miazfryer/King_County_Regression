@@ -1,37 +1,39 @@
-# Phase 2 Project
+# King Count - House Pricing Insights
 
-Another module down--you're almost half way there!
 
-![awesome](https://raw.githubusercontent.com/learn-co-curriculum/dsc-phase-2-project-campus/master/halfway-there.gif)
+## Overview
 
-All that remains in Phase 2 is to put our newfound data science skills to use with a large project! This project should take 20 to 30 hours to complete.
+This project analyzes housing prices and features in King County for real estate agencies to see which feature has the strongest correlation with price. This project's recommendations will inform real estate agencies on which housing features to focus on when they are seeking to invest in King County Properties.
 
-## Project Overview
 
-For this project, you will use regression modeling to analyze house sales in a northwestern county.
+## Business Problem
 
-### The Data
+There has been an increased competition between real estate agencies in King County due to the influx of professionals within the tech industry. As this trends continues, it becomes more important for real estate agencies to strategically invest in properties with the right housing features to get the best selling price. 
 
-This project uses the King County House Sales dataset, which can be found in  `kc_house_data.csv` in the data folder in this repo. The description of the column names can be found in `column_names.md` in the same folder. As with most real world data sets, the column names are not perfectly described, so you'll have to do some research or use your best judgment if you have questions about what the data means.
-
-It is up to you to decide what data from this dataset to use and how to use it. If you are feeling overwhelmed or behind, we recommend you ignore some or all of the following features:
-
-* date
-* view
-* sqft_above
-* sqft_basement
-* yr_renovated
-* zipcode
-* lat
-* long
-* sqft_living15
-* sqft_lot15
-
-### Business Problem
-
+-----(to delete)
 It is up to you to define a stakeholder and business problem appropriate to this dataset.
 
 If you are struggling to define a stakeholder, we recommend you complete a project for a real estate agency that helps homeowners buy and/or sell homes. A business problem you could focus on for this stakeholder is the need to provide advice to homeowners about how home renovations might increase the estimated value of their homes, and by what amount.
+
+-------
+
+### The Data
+
+This project uses the King County House Sales dataset which contains the house sale records from 2014 to 2015. Each sale record contains the selling price and housing features at the point of sale. 
+
+
+### Method
+
+For our approach, We followed the CRISP-DM standard process for Data Analysis as a guideline. 
+
+CRISP-DM IMG
+
+
+### Results
+
+
+
+
 
 ## Deliverables
 
@@ -44,6 +46,13 @@ There are three deliverables for this project:
 Review the "Project Submission & Review" page in the "Milestones Instructions" topic for instructions on creating and submitting your deliverables. Refer to the rubric associated with this assignment for specifications describing high-quality deliverables.
 
 ### Key Points
+
+## Recommendations
+
+### Future Analysis
+
+### Repository Structure
+
 
 * **Your deliverables should explicitly address each step of the data science process.** Refer to [the Data Science Process lesson](https://github.com/learn-co-curriculum/dsc-data-science-processes) from Topic 19 for more information about process models you can use.
 
