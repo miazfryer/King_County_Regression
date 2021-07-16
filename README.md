@@ -73,7 +73,7 @@ We even believe there are certain zipcode areas to focus on for purchasing prope
 
 ![graph_revenue_genre](./Images/topzippps.png) 
 
-Focusing on the highest coefficient neighborhood we recommend investing in the following zipcodes. 
+Focusing on the highest coefficient neighborhoods we recommend investing in the following zipcodes. 
 
 1)Medina/Bellevue: Zipcodes 980039, 98004
 2)Madison Park/ Capitol Hill: Zipcodes 98112, 98102
@@ -85,9 +85,9 @@ We also recommend staying away from certain areas.
 
 The zipcodes in black areas above were zipcodes that performed poorly compared to others. They even were areas the house prices were likely to be lower than other areas. They were focused around Auburn area and we recommend not purchasing properties in these areas.
 
-Lake Morton: 98092
-Federal Way: 98023
-Lakeland North/South: 98003, 98001
+1) Lake Morton: 98092
+2) Federal Way: 98023
+3) Lakeland North/South: 98003, 98001
 
 
 ### Future Analysis
