@@ -25,9 +25,9 @@ We then started preparing data by first checking if there was any null value. We
 
 To begin, we chose just the footage of the house for our baseline model. Then, we built the second model by adding one additional feature, grade, to the baseline model. From there, we applied what we observed and learned from the first models to our final predictive model. We tried the following methods to build the models:   
 
-Standard scalar transformation
-Polynomial transformation 
-Dummy variable transformation
+- Standard scalar transformation
+- Polynomial transformation 
+- Dummy variable transformation
 
 After iterating through different combinations of variables and regression models, we came to the conclusion that polynomial transformation and dummy variable transformation gave the best result. We then built the third model using the dummy variable of the zipcodes. Our final model included everything we mentioned above and dummy variable transformation of waterfront, bedrooms, and floors. 
 
@@ -45,7 +45,7 @@ To examine our final model, we ran it on the test data.
  ![graph_revenue_genre](./Images/price_vs_sqrt_living_reg.png)
  ![graph_revenue_genre](./Images/coefficent.png)
 
-According to the results we obtained from our final model, the base price for the King County house price (the intercept of the model) is about $-6,749,244. Without any attributes, the house won't be worth anything. However, it will increase the value by the highest amount if one considers the right zipcodes, a higher grade, a bigger footage of the house and having a waterfront feature.
+According to the results we obtained from our final model a house Without any attributes won't be worth anything. However, it will increase the value by the highest amount if one considers the right zipcodes, a higher grade, a bigger footage of the house and having a waterfront feature.
 
 Mean Squarred Error(MSE) means that for an average house price, this algorithm will be off by $151,476.5, given the average house price for this dataset is $540,296.6. Therefore, our model still has room for improvement.
 
@@ -58,9 +58,9 @@ However, our model is more than 80% accurate in prediction, which is a huge impr
 
 According to our analysis, when looking to invest in houses in King County, we recommend to focus on: 
 
-House square footage
-House Grade
-Zip Code
+- House square footage
+- House Grade
+- Zip Code
 
 
 
@@ -71,6 +71,8 @@ For the future analysis, we would continue to explore correlations between diffe
 
 ### Repository Structure 
 
+
+'''
 ├── Images
 ├── Individual
 ├── Images
@@ -78,3 +80,4 @@ For the future analysis, we would continue to explore correlations between diffe
 ├── README.md
 ├── __init__.py
 ├── realestate_regression_model.upynb
+'''
