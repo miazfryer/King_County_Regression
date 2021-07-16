@@ -34,16 +34,16 @@ After iterating through different combinations of variables and regression model
 
 To examine our final model, we ran it on the test data. 
 
- ![graph_revenue_genre](./images/zipcdoe_vs_price.png)
- ![graph_revenue_genre](./images/sqft_living_vs_price.png)
- ![graph_revenue_genre](./images/price_vs_grade.png)
+ ![graph_revenue_genre](./Images/zipcdoe_vs_price.png)
+ ![graph_revenue_genre](./Images/sqft_living_vs_price.png)
+ ![graph_revenue_genre](./Images/price_vs_grade.png)
 
 
 ### Results
 
- ![graph_revenue_genre](./images/train_final_model.png)
- ![graph_revenue_genre](./images/price_vs_sqrt_living_reg.png)
- ![graph_revenue_genre](./images/coefficent.png)
+ ![graph_revenue_genre](./Images/train_final_model.png)
+ ![graph_revenue_genre](./Images/price_vs_sqrt_living_reg.png)
+ ![graph_revenue_genre](./Images/coefficent.png)
 
 According to the results we obtained from our final model, the base price for the King County house price (the intercept of the model) is about $-6,749,244. Without any attributes, the house won't be worth anything. However, it will increase the value by the highest amount if one considers the right zipcodes, a higher grade, a bigger footage of the house and having a waterfront feature.
 
