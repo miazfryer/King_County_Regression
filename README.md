@@ -38,7 +38,7 @@ After iterating through different combinations of variables and regression model
 
 ![graph_revenue_genre](./Images/zipcdoe_vs_price.png)
 
-The chart shows that even among the Top 10 zipcodes by average salary there is a great variance among the prices. Therefore we decided to include zipcodes into our final analysis. 
+The chart shows that even among the Top 10 zipcodes by average salary there is a great variance among the prices. Therefore, we decided to include zipcodes into our final analysis. 
 
 Our final model included everything we mentioned above and dummy variable transformation of waterfront, bedrooms, and floors. 
 Finally, to examine our final model, we ran it on the test data. 
@@ -48,20 +48,20 @@ Finally, to examine our final model, we ran it on the test data.
 ### Results
 
 
-According to the results we obtained from our final model a house Without any attributes won't be worth anything. However, it will increase the value by the highest amount if one considers the right zipcodes, a higher grade, a bigger footage of the house and having a waterfront feature.
+According to the results we obtained from our final model a house without any attributes won't be worth anything. However, it will increase the value by the highest amount if one considers the right zipcodes, a higher grade, a bigger footage of the house and having a waterfront feature.
 
 Mean Squarred Error(MSE) means that for an average house price, this algorithm will be off by $151,476.5, given the average house price for this dataset is $540,296.6. Therefore, our model still has room for improvement.
 
 ![graph_revenue_genre](./Images/base_model_reg.png)
 
-Our model was not ideal since the distribution of the residuals is heteroscedastic; therefore, the p value and confidence intervals of our variables are no longer reliable. The residuals also violated the normal distribution assumption for linear regression. Even though most of the target variables are mostly linearly related to independent variables, the high multicollinearity amongst the independent variables is still problematic.  
+Our model is not ideal since the distribution of the residuals is heteroscedastic. Therefore, the p value and confidence intervals of our variables are no longer reliable. The residuals also violated the normal distribution assumption for linear regression. Even though most of the target variables are mostly linearly related to independent variables, the high multicollinearity amongst the independent variables is still problematic.  
 
 However, our model is more than 80% accurate in prediction, which is a huge improvement from our baseline model with only 50% accuracy. Also, the accuracy of our model is within the reasonable range, given that linear regression does not explain most relationships.
 
 ![graph_revenue_genre](./Images/train_final_model.png)
 
 
-## Recommendations. 
+## Recommendations
 
 According to our analysis, when looking to invest in houses in King County, we recommend to focus on: 
 
@@ -69,11 +69,10 @@ According to our analysis, when looking to invest in houses in King County, we r
 - House Grade
 - Zip Code
 
-We even believe there are certain zipcode areas to focus on for purchasing properties with higher prices 
 
 ![graph_revenue_genre](./Images/topzippps.png) 
 
-Focusing on the highest coefficient neighborhoods we recommend investing in the following zipcodes. 
+Focusing on the highest coefficient neighborhoods, we recommend investing in the following zipcodes. 
 
 1)Medina/Bellevue: Zipcodes 980039, 98004
 2)Madison Park/ Capitol Hill: Zipcodes 98112, 98102
@@ -83,7 +82,7 @@ We also recommend staying away from certain areas.
 
 ![graph_revenue_genre](./Images/lower.png)
 
-The zipcodes in black areas above were zipcodes that performed poorly compared to others. They even were areas the house prices were likely to be lower than other areas. They were focused around Auburn area and we recommend not purchasing properties in these areas.
+The zipcodes in black areas above were zipcodes that performed poorly compared to others. There were areas the house prices were likely to be lower than other areas. They were focused around Auburn area and we recommend not purchasing properties in these areas.
 
 1) Lake Morton: 98092
 2) Federal Way: 98023
