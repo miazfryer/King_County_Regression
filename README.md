@@ -19,9 +19,14 @@ This project uses the King County House Sales dataset which contains the house s
 
 ### Method
 
-We explored the dataset to see which variables made the most sense for our baseline model. Two most correlated variables with our target ‘price’ were house square footage and the house grade level.
+
+We first started by preparing data. We checked if there was any null value. We found some in the waterfront column and we replaced them with zeros. We also removed an outlier which had 33 bedrooms and 1.7 bathrooms. Finally, we checked if the data provided had a gaussian distribution.
+
+We then explored the dataset to see which variables made the most sense for our baseline model. Two most correlated variables with our target ‘price’ were house square footage and the house grade level.
+
+![graph_revenue_genre](./Images/sqft_living_vs_price.png)
+![graph_revenue_genre](./Images/price_vs_grade.png)
  
-We then started preparing data by first checking if there was any null value. We found some in the waterfront column and we replaced them with zeros. We also removed an outlier which had 33 bedrooms and 1.7 bathrooms. Finally, we checked if the data provided had a gaussian distribution.
 
 To begin, we chose just the footage of the house for our baseline model. Then, we built the second model by adding one additional feature, grade, to the baseline model. From there, we applied what we observed and learned from the first models to our final predictive model. We tried the following methods to build the models:   
 
@@ -29,29 +34,29 @@ To begin, we chose just the footage of the house for our baseline model. Then, w
 - Polynomial transformation 
 - Dummy variable transformation
 
-After iterating through different combinations of variables and regression models, we came to the conclusion that polynomial transformation and dummy variable transformation gave the best result. We then built the third model using the dummy variable of the zipcodes. Our final model included everything we mentioned above and dummy variable transformation of waterfront, bedrooms, and floors. 
+After iterating through different combinations of variables and regression models, we came to the conclusion that polynomial transformation and dummy variable transformation gave the best result. We then built the third model using the dummy variable of the zipcodes. 
 
+![graph_revenue_genre](./Images/zipcdoe_vs_price.png)
 
-To examine our final model, we ran it on the test data. 
+Our final model included everything we mentioned above and dummy variable transformation of waterfront, bedrooms, and floors. 
+Finally, to examine our final model, we ran it on the test data. 
 
- ![graph_revenue_genre](./Images/zipcdoe_vs_price.png)
- ![graph_revenue_genre](./Images/sqft_living_vs_price.png)
- ![graph_revenue_genre](./Images/price_vs_grade.png)
-
+ 
 
 ### Results
 
- ![graph_revenue_genre](./Images/train_final_model.png)
- ![graph_revenue_genre](./Images/price_vs_sqrt_living_reg.png)
- ![graph_revenue_genre](./Images/coefficent.png)
 
 According to the results we obtained from our final model a house Without any attributes won't be worth anything. However, it will increase the value by the highest amount if one considers the right zipcodes, a higher grade, a bigger footage of the house and having a waterfront feature.
 
 Mean Squarred Error(MSE) means that for an average house price, this algorithm will be off by $151,476.5, given the average house price for this dataset is $540,296.6. Therefore, our model still has room for improvement.
 
+![graph_revenue_genre](./Images/base_model_reg.png)
+
 Our model was not ideal since the distribution of the residuals is heteroscedastic; therefore, the p value and confidence intervals of our variables are no longer reliable. The residuals also violated the normal distribution assumption for linear regression. Even though most of the target variables are mostly linearly related to independent variables, the high multicollinearity amongst the independent variables is still problematic.  
 
 However, our model is more than 80% accurate in prediction, which is a huge improvement from our baseline model with only 50% accuracy. Also, the accuracy of our model is within the reasonable range, given that linear regression does not explain most relationships.
+
+![graph_revenue_genre](./Images/train_final_model.png)
 
 
 ## Recommendations. 
