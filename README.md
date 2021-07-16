@@ -1,67 +1,80 @@
-# Phase 2 Project
+### King County - House Pricing Insights
 
-Another module down--you're almost half way there!
 
-![awesome](https://raw.githubusercontent.com/learn-co-curriculum/dsc-phase-2-project-campus/master/halfway-there.gif)
+## Overview
 
-All that remains in Phase 2 is to put our newfound data science skills to use with a large project! This project should take 20 to 30 hours to complete.
+This project analyzes housing prices and features in King County for real estate agencies to see which feature has the strongest correlation with a house’s selling price. This project will recommend to real estate agencies which housing features to focus on when they are seeking to invest in King County Properties.
 
-## Project Overview
 
-For this project, you will use regression modeling to analyze house sales in a northwestern county.
+## Business Problem
+
+Stakeholders: Real Estate Agencies
+
+There has been an increase in competition among real estate agencies in King County due to the influx of professionals within the tech industry to the area. As this trend continues, it becomes more important for real estate agencies to strategically invest in properties with the right housing features to get the best selling price. 
+
 
 ### The Data
 
-This project uses the King County House Sales dataset, which can be found in  `kc_house_data.csv` in the data folder in this repo. The description of the column names can be found in `column_names.md` in the same folder. As with most real world data sets, the column names are not perfectly described, so you'll have to do some research or use your best judgment if you have questions about what the data means.
+This project uses the King County House Sales dataset which contains the house sale records from 2014 to 2015. Each sale record contains the selling price and housing features at the point of sale. 
 
-It is up to you to decide what data from this dataset to use and how to use it. If you are feeling overwhelmed or behind, we recommend you ignore some or all of the following features:
+### Method
 
-* date
-* view
-* sqft_above
-* sqft_basement
-* yr_renovated
-* zipcode
-* lat
-* long
-* sqft_living15
-* sqft_lot15
+We explored the dataset to see which variables made the most sense for our baseline model. Two most correlated variables with our target ‘price’ were house square footage and the house grade level.
+ 
+We then started preparing data by first checking if there was any null value. We found some in the waterfront column and we replaced them with zeros. We also removed an outlier which had 33 bedrooms and 1.7 bathrooms. Finally, we checked if the data provided had a gaussian distribution.
 
-### Business Problem
+To begin, we chose just the footage of the house for our baseline model. Then, we built the second model by adding one additional feature, grade, to the baseline model. From there, we applied what we observed and learned from the first models to our final predictive model. We tried the following methods to build the models:   
 
-It is up to you to define a stakeholder and business problem appropriate to this dataset.
+Standard scalar transformation
+Polynomial transformation 
+Dummy variable transformation
 
-If you are struggling to define a stakeholder, we recommend you complete a project for a real estate agency that helps homeowners buy and/or sell homes. A business problem you could focus on for this stakeholder is the need to provide advice to homeowners about how home renovations might increase the estimated value of their homes, and by what amount.
+After iterating through different combinations of variables and regression models, we came to the conclusion that polynomial transformation and dummy variable transformation gave the best result. We then built the third model using the dummy variable of the zipcodes. Our final model included everything we mentioned above and dummy variable transformation of waterfront, bedrooms, and floors. 
 
-## Deliverables
 
-There are three deliverables for this project:
+To examine our final model, we ran it on the test data. 
 
-* A **GitHub repository**
-* A **Jupyter Notebook**
-* A **non-technical presentation**
+ ![graph_revenue_genre](./images/zipcdoe_vs_price.png)
+ ![graph_revenue_genre](./images/sqft_living_vs_price.png)
+ ![graph_revenue_genre](./images/price_vs_grade.png)
 
-Review the "Project Submission & Review" page in the "Milestones Instructions" topic for instructions on creating and submitting your deliverables. Refer to the rubric associated with this assignment for specifications describing high-quality deliverables.
 
-### Key Points
+### Results
 
-* **Your deliverables should explicitly address each step of the data science process.** Refer to [the Data Science Process lesson](https://github.com/learn-co-curriculum/dsc-data-science-processes) from Topic 19 for more information about process models you can use.
+ ![graph_revenue_genre](./images/train_final_model.png)
+ ![graph_revenue_genre](./images/price_vs_sqrt_living_reg.png)
+ ![graph_revenue_genre](./images/coefficent.png)
 
-* **Your Jupyter Notebook should demonstrate an iterative approach to modeling.** This means that you begin with a basic model, evaluate it, and then provide justification for and proceed to a new model. After you finish refining your models, you should provide 1-3 paragraphs discussing your final model - this should include interpreting at least 3 important parameter estimates or statistics.
+According to the results we obtained from our final model, the base price for the King County house price (the intercept of the model) is about $-6,749,244. Without any attributes, the house won't be worth anything. However, it will increase the value by the highest amount if one considers the right zipcodes, a higher grade, a bigger footage of the house and having a waterfront feature.
 
-* **Based on the results of your models, your notebook and presentation should discuss at least two features that have strong relationships with housing prices.**
+Mean Squarred Error(MSE) means that for an average house price, this algorithm will be off by $151,476.5, given the average house price for this dataset is $540,296.6. Therefore, our model still has room for improvement.
 
-## Getting Started
+Our model was not ideal since the distribution of the residuals is heteroscedastic; therefore, the p value and confidence intervals of our variables are no longer reliable. The residuals also violated the normal distribution assumption for linear regression. Even though most of the target variables are mostly linearly related to independent variables, the high multicollinearity amongst the independent variables is still problematic.  
 
-Start on this project by forking and cloning [this project repository](https://github.com/learn-co-curriculum/dsc-phase-2-project) to get a local copy of the dataset.
+However, our model is more than 80% accurate in prediction, which is a huge improvement from our baseline model with only 50% accuracy. Also, the accuracy of our model is within the reasonable range, given that linear regression does not explain most relationships.
 
-We recommend structuring your project repository similar to the structure in [the Phase 1 Project Template](https://github.com/learn-co-curriculum/dsc-project-template). You can do this either by creating a new fork of that repository to work in or by building a new repository from scratch that mimics that structure.
 
-## Project Submission and Review
+## Recommendations. 
 
-Review the "Project Submission & Review" page in the "Milestones Instructions" topic to learn how to submit your project and how it will be reviewed. Your project must pass review for you to progress to the next Phase.
+According to our analysis, when looking to invest in houses in King County, we recommend to focus on: 
 
-## Summary
+House square footage
+House Grade
+Zip Code
 
-This project will give you a valuable opportunity to develop your data science skills using real-world data. The end-of-phase projects are a critical part of the program because they give you a chance to bring together all the skills you've learned, apply them to realistic projects for a business stakeholder, practice communication skills, and get feedback to help you improve. You've got this!
 
+
+### Future Analysis
+
+For the future analysis, we would continue to explore correlations between different combinations of housing features to see if we could improve the correlation while maintaining our bias and variance levels. We would also investigate the effect size of zip codes and neighborhoods and see if there are specific properties in lower average selling price neighborhoods that are positive outliers within the zip code. Finally, We would want to incorporate a real estate agency’s costs into our models to improve the predictability. 	
+
+
+### Repository Structure 
+
+├── Images
+├── Individual
+├── Images
+├── gitignore
+├── README.md
+├── __init__.py
+├── realestate_regression_model.upynb
