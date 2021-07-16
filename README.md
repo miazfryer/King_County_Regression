@@ -28,13 +28,6 @@ We then explored the dataset to see which variables made the most sense for our 
 
 ![graph_revenue_genre](./Images/price_vs_grade.png)
 
-These features were a great start building our model but we had to improve and decided to perform an analysis but zipcodes. Below we plotted the relationship between zipcodes and average price for the ten best perofrming zipcodes. 
-
-!.[graph revenue genre](./Images/zipcdoe_vs_price.png)
-
-The chart shows that even among the Top 10 zipcodes by average salary there is a great variance among the prices. Therefore we decided to include zipcodes into our final analysis. 
- 
-
 To begin, we chose just the footage of the house for our baseline model. Then, we built the second model by adding one additional feature, grade, to the baseline model. From there, we applied what we observed and learned from the first models to our final predictive model. We tried the following methods to build the models:   
 
 - Standard scalar transformation
@@ -44,6 +37,8 @@ To begin, we chose just the footage of the house for our baseline model. Then, w
 After iterating through different combinations of variables and regression models, we came to the conclusion that polynomial transformation and dummy variable transformation gave the best result. We then built the third model using the dummy variable of the zipcodes. 
 
 ![graph_revenue_genre](./Images/zipcdoe_vs_price.png)
+
+The chart shows that even among the Top 10 zipcodes by average salary there is a great variance among the prices. Therefore we decided to include zipcodes into our final analysis. 
 
 Our final model included everything we mentioned above and dummy variable transformation of waterfront, bedrooms, and floors. 
 Finally, to examine our final model, we ran it on the test data. 
