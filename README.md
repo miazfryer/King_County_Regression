@@ -41,8 +41,8 @@ To examine our final model, we ran it on the test data.
 
 ### Results
 
+ ![graph_revenue_genre](./Images/base_model_reg.png)
  ![graph_revenue_genre](./Images/train_final_model.png)
- ![graph_revenue_genre](./Images/price_vs_sqrt_living_reg.png)
  ![graph_revenue_genre](./Images/coefficent.png)
 
 According to the results we obtained from our final model a house Without any attributes won't be worth anything. However, it will increase the value by the highest amount if one considers the right zipcodes, a higher grade, a bigger footage of the house and having a waterfront feature.
