@@ -76,6 +76,8 @@ For the future analysis, we would continue to explore correlations between diffe
 
 ### Repository Structure 
 
+```bash
+
 ├── README.md
 ├── __init__.py
 ├── data      <-- CSV files used in analyses
@@ -88,3 +90,4 @@ For the future analysis, we would continue to explore correlations between diffe
 ├── King_County_Regression.ipynb     <-- Jupyter Notebook illustrating analysis 
 └── King_County_Regression.ipynb.pdf   <-- Presentation slides
 
+```
