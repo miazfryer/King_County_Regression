@@ -76,13 +76,15 @@ For the future analysis, we would continue to explore correlations between diffe
 
 ### Repository Structure 
 
-
-'''
-├── Images
-├── Individual
-├── Images
-├── gitignore
 ├── README.md
 ├── __init__.py
-├── realestate_regression_model.upynb
-'''
+├── data      <-- CSV files used in analyses
+├── Images      <-- Externally obtained and internally generated images
+├── individuals     <--- Directory for individual workspaces
+│   ├── harman
+│   ├── jesus
+│   ├── sejin
+│   └── mia
+├── King_County_Regression.ipynb     <-- Jupyter Notebook illustrating analysis 
+└── King_County_Regression.ipynb.pdf   <-- Presentation slides
+
