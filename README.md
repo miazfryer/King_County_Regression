@@ -25,7 +25,14 @@ We first started by preparing data. We checked if there was any null value. We f
 We then explored the dataset to see which variables made the most sense for our baseline model. Two most correlated variables with our target ‘price’ were house square footage and the house grade level.
 
 ![graph_revenue_genre](./Images/sqft_living_vs_price.png)
+
 ![graph_revenue_genre](./Images/price_vs_grade.png)
+
+These features were a great start building our model but we had to improve and decided to perform an analysis but zipcodes. Below we plotted the relationship between zipcodes and average price for the ten best perofrming zipcodes. 
+
+!.[graph revenue genre](./Images/zipcdoe_vs_price.png)
+
+The chart shows that even among the Top 10 zipcodes by average salary there is a great variance among the prices. Therefore we decided to include zipcodes into our final analysis. 
  
 
 To begin, we chose just the footage of the house for our baseline model. Then, we built the second model by adding one additional feature, grade, to the baseline model. From there, we applied what we observed and learned from the first models to our final predictive model. We tried the following methods to build the models:   
@@ -67,6 +74,25 @@ According to our analysis, when looking to invest in houses in King County, we r
 - House Grade
 - Zip Code
 
+We even believe there are certain zipcode areas to focus on for purchasing properties with higher prices 
+
+![graph_revenue_genre](./Images/topzippps.png) 
+
+Focusing on the highest coefficient neighborhood we recommend investing in the following zipcodes. 
+
+1)Medina/Bellevue: Zipcodes 980039, 98004
+2)Madison Park/ Capitol Hill: Zipcodes 98112, 98102
+3)Mercer Island: Zipcode 98040
+
+We also recommend staying away from certain areas.
+
+![graph_revenue_genre](./Images/lower.png)
+
+The zipcodes in black areas above were zipcodes that performed poorly compared to others. They even were areas the house prices were likely to be lower than other areas. They were focused around Auburn area and we recommend not purchasing properties in these areas.
+
+Lake Morton: 98092
+Federal Way: 98023
+Lakeland North/South: 98003, 98001
 
 
 ### Future Analysis
